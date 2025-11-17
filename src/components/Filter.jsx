@@ -1,10 +1,10 @@
-import React from "react";
 
 /**
  * Filter
  * - value: string
  * - onChange: function(value)
  */
+import React from "react";
 
 export default function Filter({ value, onChange }) {
   return (
@@ -19,8 +19,7 @@ export default function Filter({ value, onChange }) {
   );
 }
 
-
-
+// end of Filter code //
 
 
 // import React, { useCallback } from "react";

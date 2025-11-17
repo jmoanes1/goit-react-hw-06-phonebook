@@ -1,12 +1,13 @@
 
-import React, { useMemo } from "react";
-
 /**
  * ContactList
  * props:
  *  - contacts: array [{ id, name, number }]
  *  - onDelete(id)
  */
+
+// ContactList.jsx with redux optimizations //
+import React, { useMemo } from "react";
 
 export default function ContactList({ contacts, onDelete }) {
   // memoize rendered list items to avoid unnecessary re-renders
@@ -49,10 +50,11 @@ function getInitials(name) {
   return (parts[0][0] + parts[1][0]).toUpperCase();
 }
 
+// end of ContactList with redux optimizations //
 
 
 
-
+// Previous ContactList.jsx without redux optimizations //
 
 // import React, { memo, useMemo } from "react";
 // import ContactItem from "./ContactItem";

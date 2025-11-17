@@ -87,10 +87,6 @@ export default App;
 // End of redux Apps.js //
 
 
-
-
-
-
 //... This Code without Redux:...//
 
 // import React, { useState, useEffect, useCallback, useMemo } from "react";
