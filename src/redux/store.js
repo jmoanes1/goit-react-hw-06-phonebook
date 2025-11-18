@@ -11,6 +11,8 @@ const persistConfig = {
   storage, // use localStorage
   // Only persist the items array, not the filter (filter is temporary UI state)
   whitelist: ["items"], // only persist contacts items, not filter
+  // Version for migration handling
+  version: 1,
 };
 
 // Create persisted reducer
@@ -24,7 +26,7 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE", "persist/PAUSE", "persist/PURGE", "persist/REGISTER"],
       },
     }),
 });
